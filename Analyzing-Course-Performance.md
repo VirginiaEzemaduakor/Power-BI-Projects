@@ -1,10 +1,11 @@
 # Analyzing-Course-Performance
+![Alt text](images/acp_report.png)
 
 ## Table of contents
 - [Introduction](#introduction)
    - [Objective](#objective)
-   - [Data organization and process](#data-organization-and-process)
-   - [Metric](#metric)
+   - [Data Preparation and processing](#data-preparation-and-processing)
+   - [Metrics Used](#metric-used)
 - [Findings](#findings)
 - [Recommendations](#recommendations)
 
@@ -12,71 +13,67 @@
 ---
 
 ## Introduction
-Dataquest is an online data analysis and data science instruction service that offers career path courses (which can be completed in about 45 weeks) and skill paths courses with related lessons that teaches through challenging exercises and real-world projects.
-Courses are the most important part of Dataquest's business. Having high-quality, effective, and engaging courses is a top company priority. 
 
+Dataquest delivers career-path and skill-path courses via hands-on, project-based learning. As their course offerings expand, relying solely on qualitative feedback becomes insufficient for evaluating course effectiveness and learner satisfaction.
 
 ### Objective 
-As the course catalogue grows, it becomes more difficult to rely purely on qualitative data.
--	Provide feedback on which lessons to improve.
-- Build a power BI app that surfaces quantitative data on course quality.
 
-  
-### Data organization and process
-Three csv files were provided: a file with course and lesson ID numbers, a file with net promoter scores (NPS), and a file with lesson completion rates. The primary limitation of the report is the quality of the data. Each file contains lessons that are missing in the others. I chose to limit the report to lessons that only occur across all three files.
-This project made use of DB Browser for SQLite to handle the databases and were queried with different codes to obtain insights necessary to increase donations.
+- Identify lessons that need improvement using data-driven insights.
 
+- Develop a Power BI dashboard to visualize course quality via key performance metrics.
+
+
+### Data Preparation and processing
+
+Three CSV files were provided: one mapping course and lesson IDs, one with Net Promoter Scores (NPS), and another containing lesson completion rates. Because not all lessons appear in every file, the analysis focuses exclusively on lessons common to all three datasets to ensure consistency and accuracy.
  
                
-### Metric
+### Metrics Used
 
-*Lesson Completion Rate*
+- **Lesson Completion Rate:** Indicates learner engagement and curriculum clarity. A high rate suggests effective content; a low rate may point to issues.
 
-Lesson completion rate metric was used in this report to understand the course quality. Lessons with high completion rates show that learners understand the curriculum and are engaged enough to complete the lesson. Low completion rates suggest there may be an issue that needs to be addressed.
-
-*Net Promoter Score*
-
-Net promoter score (NPS) metric was used to measure customer satisfaction. The resulting metric gives a number between -100 and 100. It's calculated from the results of a survey question that asks, "On a scale of 1-10, how likely are you to recommend this product to others?". Dataquest students receive periodic NPS surveys, and the results are used to measure lesson and course quality.
-
+- **Net Promoter Score (NPS):** Measures learner satisfaction on a scale from –100 to 100, based on how likely they are to recommend the course.
+  
 
 ## Findings
-Top 10 and bottom 10 analysis was performed to show the course with the highest and lowest completion rate and the learners experience taking the course.
 
-*Top Ten Analysis*
+- **Top Performers:**
 
+- Course ID 1 achieved a **100% completion rate**, but with an **NPS of 51**, indicating completion without high satisfaction.
+
+- Course ID 164 had a **91% completion rate**, paired with a perfect *NPS of 100**, showing both engagement and high satisfaction.
 ![Alt text](images/top_course.PNG)
 
-The analysis shows the top 10 course id with the highest completion rate and their net promoter score (NPS) that shows how likely they are to recommend the course to someone interested in learning data skills. Course ID 1 with the highest completion rate of 100 percent, shows that these learners understand the curriculum and are engaged enough to complete the lesson; but with an NPS of 51 (the detractors), shows that the learners are not satisfied about their experience even though they completed the course. And course ID 164 with 91 percent completion rate, and the highest NPS of 100 (the promoters), shows that the learners understood the curriculum but didn’t engage enough to complete the lesson, however, are enthusiastic about their experience and likely to refer it to others. 
+- **Courses Needing Attention:**
 
-*Bottom Ten Analysis*
-
+- Course IDs **8, 23, 89, 112, 26, 47, 37, 54, 94,** and **13** have among the **lowest completion rates** and are the **least likely to be recommended**.
 ![Alt text](images/bottom_course.PNG)
-
-It is discovered in the analysis that the course ID 8, 23, 89, 112, 26, 47, 37 54, 94, and 13 has the lowest lesson completion rate and are less likely to recommend the course to others.
 
 
 ## Recommendations
 
-The following are three suggestions for which lessons to improve.
+Focus improvements on lessons meeting any of these criteria:
 
-- Lessons with a completion rate of less than 50%. 
-- Lessons with a NPS of less than 50%.
-- Lessons with both less than 50%.
+- Completion rate below 50%
 
+- NPS below 50
 
+- Meeting both of the above thresholds
  ![Alt text](images/lesson_completion.PNG) ![Alt text](images/lesson_nps.PNG)
 
 
- There are also three data limitations that would make the results much more robust if addressed. 
-- Many entries have no Course ID. 
-- Many entries have no response ID 
-- Many entries have fewer than 15 NPS surveys.
+**Data Limitations to Address**
+
+There are also three data limitations that would make the results much more robust if addressed:
+
+- Missing course IDs
+
+- Missing response IDs
+
+- Lessons with fewer than 15 NPS survey responses
 
 
-![Alt text](images/acp_report.png)
-
-
-         
+      
  <div align="right">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
                         
 

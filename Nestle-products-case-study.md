@@ -1,7 +1,7 @@
 
 # **Case-Analysis-of-Nestle-Products**
 
-![Fig.2](images/dashboard.png)
+![Fig.2](images/Nestle_report.png)
 
  ## Table of contents
 

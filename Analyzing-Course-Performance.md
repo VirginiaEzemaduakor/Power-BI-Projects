@@ -47,6 +47,7 @@ Three CSV files were provided: one mapping course and lesson IDs, one with Net P
 #### Courses Needing Attention:
 
 - Course IDs **8, 23, 89, 112, 26, 47, 37, 54, 94,** and **13** have among the **lowest completion rates** and are the **least likely to be recommended**.
+
 ![Alt text](images/bottom_course.PNG)
 
 

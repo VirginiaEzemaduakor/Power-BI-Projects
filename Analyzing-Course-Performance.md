@@ -46,7 +46,8 @@ Three CSV files were provided: one mapping course and lesson IDs, one with Net P
 
 #### Courses Needing Attention:
 
-- Course IDs **8, 23, 89, 112, 26, 47, 37, 54, 94,** and **13** have among the **lowest completion rates** and are the **least likely to be recommended**.![Alt text](images/bottom_course.PNG)
+- Course IDs **8, 23, 89, 112, 26, 47, 37, 54, 94,** and **13** have among the **lowest completion rates** and are the **least likely to be recommended**.
+![Alt text](images/bottom_course.PNG)
 
 
 ## Recommendations
@@ -58,6 +59,7 @@ Focus improvements on lessons meeting any of these criteria:
 - NPS below 50
 
 - Meeting both of the above thresholds
+
 ![Alt text](images/lesson_completion.PNG) ![Alt text](images/lesson_nps.PNG)
 
 
